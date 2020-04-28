@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    /*ul第一个元素 */
+        ul li:first-child{
+            color: darkmagenta;
+        }
+    /*ul最后一个元素 */
+        ul li:last-child{
+            color: gold;
+        }
+       /*选中p1 :定位到父元素, 选择当前第一个元素
+       p:nth-child意思是:选中当前p元素的父级,选中当前父级元素的第一个,并且是当前元素才生效,
+       根据顺序
+       */
+        p:nth-child(1){
+            background: coral;
+        }
+
+        /*选中父元素，下的p元素的第二个,
+        根据类型*/
+        p:nth-of-type(3){
+            background: red;
+        }
+
+        a:hover{
+            background: black;
+        }
+    </style>
+</head>
+<body>
+<a href="">123</a>
+    <h1>123</h1>
+    <h1>1231</h1>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--相对定位: 相对于自己原来的位置进行偏移.
+    相对于原来的位置进行指定的偏移，  （离方向多少距离） 相对定位的话，他仍然在标准文档流中,原来的位置会被保留
+    top:-20px
+
+    -->
+    <style>
+        body{
+            padding: 20px;
+        }
+        div{
+            margin: 10px;
+            padding: 5px;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        #father{
+            border: 1px solid red;
+        }
+        #first{
+            background-color: #21D4FD;
+            border: 1px dashed salmon;
+            position: relative; /*相对:上下左右*/
+            top:-20px;
+            left: 20px;
+        }
+        #second{
+            background-color: #21D499;
+            border: 1px dashed seagreen;
+        }
+        #third{
+            background-color: #2162FD;
+            border: 1px dashed greenyellow;
+            position: relative;
+            bottom: -10px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="father">
+    <div  id="first">第一个盒子</div>
+    <div  id="second">第一个盒子</div>
+    <div  id="third">第一个盒子</div>
+</div>
+</body>
+</html>

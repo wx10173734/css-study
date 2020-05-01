@@ -7,8 +7,7 @@
     font-weight: bold;
     text-indent: 1em;
     line-height: 35px;
-    /* 颜色 图片 图片位置,平铺方式*/
-    background: red url("../images/2.jpg") 200px 10px no-repeat;
+    background: red;
 }
 /*ul li*/
 /**
@@ -24,9 +23,6 @@ ul li{
     height: 40px;
     list-style: none;
     text-indent: 1em;
-    background-image: url("../images/2.jpg");
-    background-repeat: no-repeat;
-    background-position: 200px 10px;
 
 }
 a{

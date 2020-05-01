@@ -1,0 +1,75 @@
+img{
+    width: 100px;
+    height: 100px;
+}
+div{
+    margin: 10px;
+    padding: 5px;
+}
+
+/**
+display 方向不可控
+float 浮动起来会脱离标准文档流,所以要解决父级边框塌陷的问题
+ */
+
+/**
+父级边框塌陷问题
+解决方法:
+1.增加父级元素的高度  简单,元素有了固定的高度就会被限制
+2.增加一个空的div,清楚浮动  简单但空div不好 尽量避免
+3.在父级元素中增加overflow:hidden 简单 超出了就隐藏了 下拉的场景避免使用
+4.父类添加一个伪类 :after 写法稍微复杂 但无副作用 推荐使用
+ */
+
+#father{
+    border: 1px solid red;
+    /*
+    方式三
+     */
+    overflow: hidden;
+}
+/**
+方式四
+ */
+#father :after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.layer01{
+    border: 1px dashed gold;
+    display: inline-block;
+    float: left;
+}
+.layer02{
+    border: 1px dashed greenyellow;
+    display: inline-block;
+    float: left;
+}
+.layer03{
+    border: 1px dashed royalblue;
+    display: inline-block;
+    float: right;
+}
+/**
+clear:right;右侧不允许有浮动元素
+clear:left;左侧不允许有浮动元素
+clear:both;两侧不允许有浮动元素
+clear:none
+ */
+.layer04{
+    border: 1px dashed royalblue;
+    display: inline-block;
+    float: right;
+
+
+}
+/**
+方式二
+ */
+.clear{
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
